@@ -90,7 +90,19 @@ namespace FiguresProject
 
         private void mainComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            string stringa = (string)mainComboBox.SelectedItem;
+            if (stringa == "Окружность")
+            {
+                radiusTextBox.Visible = true;
+                widthTextBox.Visible = false;
+                heightTextBox.Visible = false;
+            }
+            if (stringa == "Прямоугольник")
+            {
+                radiusTextBox.Visible = false;
+                widthTextBox.Visible = true;
+                heightTextBox.Visible = true;
+            }
         }
 
         private void addButton_Click(object sender, EventArgs e)
